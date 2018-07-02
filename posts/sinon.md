@@ -113,5 +113,6 @@ stub.yieldTo(options.property,[arg...])
 被指定参数执行过
 
 #### sinon.assert.calledOnce(cfn)
+#### sinon.assert.match(actual, expectation)
 
 
