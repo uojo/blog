@@ -22,3 +22,7 @@ The entrypoint.js lets you precisely contol your application flow and organize t
 - pm2 serve <path> <port>
 - pm2 serve 
   - 默认当前执行目录，端口 8080
+
+### log
+- pm2 logs <app?> #查看日志
+- pm2 flush #清空日志
