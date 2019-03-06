@@ -56,7 +56,12 @@ Mocha 是目前广泛使用的测试框架，它需要依赖三方库（chai）�
 
 特点
 - 配置简单，理念是希望默认配置就能运行得很好
-- 支持快照测试
+- 支持快照测试，可对 React 等框架进行 UI 测试
+- 测试用例并行执行，更高效
+- 强大的 Mock 功能
+- 内置的代码覆盖率检查，不需要在引入额外的工具
+- 集成 JSDOM，可以直接进行 DOM 相关的测试
+- 可以直接对 ES Module Import 的代码测试
 
 参考
 - [Jest](https://facebook.github.io/jest/zh-Hans)
