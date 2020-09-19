@@ -1,0 +1,6 @@
+{
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  /* 编辑器（vscode）使用format工具（Prettier）在保存的时候进行格式化 */
+  "editor.formatOnSave": true
+}
