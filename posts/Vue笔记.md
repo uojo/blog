@@ -120,10 +120,11 @@
     - v1 是个值
   - :my-msg="v1" 申明 props:["myMsg"]，绑定的可以是变量，也可以是个字面量的值
     - v1 是个变量
+    - 注意：组件属性 my-msg 是使用连接符，因为 HTML 标签名与属性名大小写不敏感。
   - 验证及指明类型
   - 保留字段 reserved
     - key
-- 内联申明 ref，使用 实例.\$ref.xxx 取得是组件实例
+- 内联申明 ref，使用 `this.$ref.xxx` 取得是组件实例
 
 #### slot 组件：备用块，可以使用 name 属性指向
 
@@ -150,7 +151,24 @@ Vue.component("async-example", function (resolve, reject) {
 
 #### mixins 混合
 
-#### plugin 插件
+#### plugin
+
+功能：
+
+- 添加全局方法或属性
+- 添加全局资源：指令、过滤器、过渡等
+- 通过全局 mixin 方法添加一些组件选项
+- 通过设置 Vue.prototype ，添加实例共享方法
+
+使用
+
+- Vue.use(myPlugin) 在 new Vue(...) 之前执行
+
+开发
+
+- myPlugin = {install(Vue,options){...}} 也可以直接导出一个方法， Vue.use 会直接执行
+
+> 参考：https://cn.vuejs.org/v2/guide/plugins.html
 
 ### 参考
 
