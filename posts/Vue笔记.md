@@ -63,11 +63,15 @@
 - destroyed
   - 卸载 watcher、child-components、event
 
-### 模板的语法，mustache （双大括号）
+### 模板语法，mustache （双大括号）
+
+模板使用的是合法的 HTML 标签，所以能被规范的浏览器和 HTML 解析器解析。
 
 - {{}} 不能使用在模板的属性上，需要使用 v-bind:domAttr="data.field"
 - {{}} 与 v-bind 中写可以是表达式（必须是单个表达式，不能是语句）
 - {{}} 中可以使用 过滤器（管道符分隔），通过 filters : {...} 定义过滤器函数，过滤器可以串联，可以接受参数： filterA('arg1', arg2) "arg1"作为第二参数
+
+> 也可以选择使用 render 函数并搭配可选的 JSX 语法实现模板内容定义。
 
 ### 计算属性 computed：为了清晰和简单，任何复杂逻辑，都需使用计算属性。
 
