@@ -31,7 +31,13 @@
 
 ## ln
 
-ln -s <fromPath> <toPath> 创建软链接
+- ln -s <fromPath> <toPath> 创建软链接
+
+## nohup
+
+nohup [命令] [参数]... [&] 忽略挂起信号运行指定的命令
+
+- nohup node app.js & 退出后继续执行命令
 
 ## ls
 
@@ -53,7 +59,8 @@ ln -s <fromPath> <toPath> 创建软链接
 
 Process Status，获取进程状态。
 
-- ps -ef #显示所有进程信息的快照
+- ps -ef #显示所有进程信息，并显示 UID, PPID, C 与 STIME 栏位（表头）
+  > PPID 表示父进程的 PID
 - ps -elf #
 
 ## kill
@@ -61,6 +68,7 @@ Process Status，获取进程状态。
 发送指定的信号到相应进程。
 
 - kill -l #列出所有信号名称
+- kill -9 [PID] #杀死指定进程
 - kill -9 \$(ps -ef | grep peidalinux) #杀死过滤后的所有进程
 - kill -u <username> #杀死指定用户的所有进程
 
