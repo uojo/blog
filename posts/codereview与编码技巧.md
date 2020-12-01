@@ -80,7 +80,7 @@ function responseCallback(data) {
 }
 ```
 
-#### 使用策略模式改写 if...if...if
+#### 使用策略模式改写 if...if...if（类 switch 场景）
 
 ```javascript
 function main(state) {
@@ -124,7 +124,7 @@ function handle2(state) {}
 const handles = [handle1, handle2];
 function main(state) {
   for (let handle of handles) {
-    if (handle()) return;
+    if (handle(state)) return;
   }
 }
 ```
@@ -153,13 +153,24 @@ const UserProfile = ({ firstName, lastName, profilePhoto }) => (
 
 #### 命名约定
 
-命名建议
+变量命名建议
 
-- 变量方法名使用驼峰
-- 涉及布尔值使用前缀：is、has、should
-- 如果方法用于操作属性，则前缀定义为 get 、set
+- 组合单词命名的变量，前缀使用形容词。例如 tableTitle、maxCount 等
+- 函数命名，使用驼峰结构，前缀使用动词，用于操作属性的，前缀使用 get 、set。例如 getValue、setTitle 等。
+- 返回或值为布尔值时，命名前缀为：is、has、should 等
+- 事件处理函数，使用 handle+eventName 为前缀，例如 handleClick。
+
+|动词|含义|
+|can|判断是否可以进行某个操作|
+|has|判断是否含有某个值|
+|is|判断是否为某个值|
+|get|获取值|
+|set|设置值|
+|load|加载数据|
 
 ```javascript
+// 例子1
+
 let User = {};
 User.car = true;
 User.admin = true;
