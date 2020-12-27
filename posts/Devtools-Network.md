@@ -53,3 +53,5 @@ TCP 三次握手时，发送端发送数据后，一段时间内（不同的操�
 
 - https://developers.google.com/web/tools/chrome-devtools/network/reference?utm_source=devtools#timing-explanation
 - https://www.cnblogs.com/both-eyes/p/10573713.html
+- https://www.cnblogs.com/ywsoftware/p/10996078.html
+- https://www.cnblogs.com/kjcy8/p/6802203.html
