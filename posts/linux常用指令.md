@@ -156,3 +156,28 @@ Global Regular Expression Print，文本搜索工具。
 ## 查看系统内核信息
 
 - cat /proc/version
+
+## curl
+
+-A 指定客户端的用户代理标头，
+`curl -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100' https://163.com`
+`curl -H 'User-Agent: php/1.0' https://163.com`
+
+-b 参数用来向服务器发送 Cookie
+`curl -b 'foo1=bar;foo2=bar2' https://google.com`
+
+-d 参数用于发送 POST 请求的数据体
+`curl -d 'login=emma＆password=123' -X POST https://google.com/login`
+或者 `curl -d 'login=emma' -d 'password=123' -X POST https://google.com/login`
+
+--data-urlencode 数等同于 -d，发送 POST 请求的数据体，区别在于会自动将发送的数据进行 URL 编码
+`curl --data-urlencode 'comment=hello world' https://google.com/login`
+
+-e 参数用来设置 HTTP 的标头 Referer，表示请求的来源
+`curl -e 'https://google.com?q=example' https://www.example.com`
+
+-H 设置请求头
+`curl -H 'Referer: https://google.com?q=example' https://www.example.com`
+
+-F 参数用来向服务器上传二进制文件
+`curl -F 'file=@photo.png' https://google.com/profile` 请求加上标头 `Content-Type: multipart/form-data`
